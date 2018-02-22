@@ -1,0 +1,19 @@
+{
+  "name": "functions",
+  "description": "Stripe Functions for Firebase",
+  "scripts": {
+    "serve": "firebase serve --only functions",
+    "shell": "firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "firebase-admin": "~5.8.1",
+    "firebase-functions": "^0.8.1",
+    "stripe": "^5.4.0"
+  },
+  "private": true
+}
