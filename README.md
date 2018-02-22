@@ -1,5 +1,5 @@
 # Headless Stripe Payments Using Firebase Functions
-##The simplest possible payment implementation - applicable to any website.
+*The simplest possible payment implementation - applicable to any website.*
 
 Implementation of Stripe's Direct Charge payment using all 3 available methods to demonstrate. These include:
 
@@ -11,7 +11,7 @@ Firebase Function implemented using a http trigger.
 
 Example code uses Firebase Hosting, but can be hosted anywhere.
 
-Further reading:
+**Further reading:**
  - Stripe Elements Method: https://stripe.com/docs/stripe-js
  - Stripe Payment Request Method: https://stripe.com/docs/stripe-js/elements/payment-request-button
  - Stripe Checkout Method: https://stripe.com/docs/checkout
