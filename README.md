@@ -1,20 +1,26 @@
 # Headless Stripe Payments Using Firebase Functions
 
-Simple stripe direct charge payment
-Implemented stripe using 3 different methods
+The simplest possible payment implementation - applicable to any website.
 
-Stripe Elements - pre-built UI components for building checkout flow
-Payment Request Button - support Apple Pay, Google Pay and the Payment Request API
-Stripe Checkout - embeddable payment form popup
+Implementation of Stripe's Direct Charge payment using all 3 available methods to demonstrate. These include:
 
-Firebase Function uses http trigger
-Front-end can be hosted anywhere
+ - Stripe Elements - pre-built UI components for building checkout flow
+ - Payment Request Button - support Apple Pay, Google Pay and the Payment Request API
+ - Stripe Checkout - embeddable payment form popup
+
+Firebase Function implemented using a http trigger.
+
+Example uses Firebase Hosting, but can be hosted anywhere.
 
 Further reading:
  - Stripe Elements Method: https://stripe.com/docs/stripe-js
  - Stripe Payment Request Method: https://stripe.com/docs/stripe-js/elements/payment-request-button
  - Stripe Checkout Method: https://stripe.com/docs/checkout
- - Firebase SDK: https://firebase.google.com/docs/functions
+ - Firebase HTTP Triggers: https://firebase.google.com/docs/functions/http-events
+
+## Front-end Code
+
+See file [public/index.html](public/index.html) for all html and js code.
 
 ## Functions Code
 
