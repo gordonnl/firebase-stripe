@@ -1,7 +1,7 @@
 # Headless Stripe Payments Using Firebase Functions
 *The simplest possible payment implementation - applicable to any website.*
 
-Implementation of Stripe's Direct Charge payment using all 3 available methods to demonstrate. These include:
+Implementation of Stripe's Direct Charge payment using all 3 available methods. Any one would suffice, however all are included to demonstrate. These include:
 
  - **Stripe Elements** - pre-built UI components for building checkout flow
  - **Payment Request Button** - supporting Apple Pay, Google Pay and the Payment Request API
