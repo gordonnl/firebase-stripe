@@ -119,19 +119,18 @@
                 elForm.style.display = 'none';
                 elProcessing.style.display = 'block';
 
-                await stripe.createToken(card).then(async result => {
+                let result = await stripe.createToken(card);
 
-                    // Error in receiving token
-                    if (result.error) return elError.textContent = result.error.message;
+                // Error in receiving token
+                if (result.error) return elError.textContent = result.error.message;
 
-                    // Pass the received token to our Firebase function
-                    let res = await charge(result.token, charge_amount, charge_currency);
-                    if (res.body.error) return elError.textContent = res.body.error;
+                // Pass the received token to our Firebase function
+                let res = await charge(result.token, charge_amount, charge_currency);
+                if (res.body.error) return elError.textContent = res.body.error;
 
-                    // Card successfully charged
-                    card.clear();
-                    isSuccess = true;
-                });
+                // Card successfully charged
+                card.clear();
+                isSuccess = true;
 
                 isSubmitting = false;
                 elProcessing.style.display = 'none';
