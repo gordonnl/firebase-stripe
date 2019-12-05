@@ -1,5 +1,5 @@
 # Headless Stripe Payments Using Firebase Functions
-*The simplest possible payment implementation - applicable to any website.*
+*The simplest possible payment implementation - for static websites.*
 
 Implementation of Stripe's Direct Charge payment using all 3 available methods. Any one would suffice, however all are included to demonstrate. These include:
 
@@ -7,9 +7,9 @@ Implementation of Stripe's Direct Charge payment using all 3 available methods. 
  - **Payment Request Button** - supporting Apple Pay, Google Pay and the Payment Request API
  - **Stripe Checkout** - embeddable payment form popup
 
-Firebase Function implemented using a http trigger.
+Secure, back-end communication to stripe performed in a Firebase Function, implemented using a http trigger.
 
-Example code uses Firebase Hosting, but can be hosted anywhere.
+Example front-end code uses Firebase Hosting, but can be hosted anywhere.
 
 **Further reading:**
  - Stripe Elements Method: https://stripe.com/docs/stripe-js
@@ -31,10 +31,10 @@ The dependencies are listed in [functions/package.json](functions/package.json).
 
 To test this integration:
  - Create a Firebase Project using the [Firebase Developer Console](https://console.firebase.google.com)
- - Enable billing on your project by switching to the Blaze or Flame plan. See [pricing](https://firebase.google.com/pricing/) for more details. This is required to be able to do requests to non-Google services.
- - Install [Firebase CLI Tools](https://github.com/firebase/firebase-tools) if you have not already and log in with `firebase login`.
+ - Enable billing on your project by switching to the Blaze or Flame plan. See [pricing](https://firebase.google.com/pricing/) for more details. This is required to allow requests to non-Google services within the Function.
+ - Install [Firebase CLI Tools](https://github.com/firebase/firebase-tools) if you have not already, and log in with `firebase login`.
  - Configure this sample to use your project using `firebase use --add` and select your project.
- - Install dependencies locally by running: `cd functions; npm install; cd -`
+ - Install dependencies locally by running: `cd functions; npm i; cd -`
  - [Add your Stripe API Secret Key](https://dashboard.stripe.com/account/apikeys) to firebase config:
      ```bash
      firebase functions:config:set stripe.token=<YOUR STRIPE SECRET KEY>
